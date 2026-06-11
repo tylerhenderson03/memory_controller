@@ -1,0 +1,403 @@
+# ----------------------------------------
+# Jasper Version Info
+# tool      : Jasper 2023.12
+# platform  : Linux 5.14.0-611.36.1.el9_7.x86_64
+# version   : 2023.12 FCS 64 bits
+# build date: 2023.12.19 17:39:24 UTC
+# ----------------------------------------
+# started   : 2026-05-15 18:07:52 PDT
+# hostname  : flip3.engr.oregonstate.edu.(none)
+# pid       : 1493440
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:42901' '-style' 'windows' '-data' 'AAABJHicVY+9CsJAEIS/KPZWPoRgxD6tnSIqiF2IZ4yBkIgxCDb6qL5JnD1JkV3Y2Z+Z270AiN5t2+Jt+FIYs2LNjqXihoMQjswpuVALMxpyCnmqKmHhY8ODK46Ks/rGc+paXiozZiGV83WtGGqWSOMt+P6RKKBvVg/6ne2nhzDqxB3FBFNmet+urHgS6z7b23CTV9y1OdUFsX64F3vCSb1cnMxzQs2dtGY/K70nbQ==' '-proj' '/nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/jgproject/sessionLogs/session_0' '-init' '-hidden' '/nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/jgproject/.tmp/.initCmds.tcl' 'bringup.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2023 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_fao".
+INFO: reading configuration file "/nfs/stak/users/hendetyl/.config/cadence/jasper.conf".
+% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+% 
+% analyze -sv controller.sv
+[-- (VERI-1482)] Analyzing Verilog file '/usr/local/apps/cadence/jasper_2023.12/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file 'controller.sv'
+% analyze -sv tb.sv
+[-- (VERI-1482)] Analyzing Verilog file 'tb.sv'
+[WARN (VERI-8026)] tb.sv(2): Empty Port in Module Declaration
+% analyze -sv properties.sv
+[-- (VERI-1482)] Analyzing Verilog file 'properties.sv'
+% analyze -sv covergroups.sv
+[-- (VERI-1482)] Analyzing Verilog file 'covergroups.sv'
+% 
+% elaborate -disable_auto_bbox \
+    -bbox_m functional_cov \
+    -top controller
+INFO (ISW003): Top module name is "controller".
+[INFO (VERI-9030)] tb.sv(19): undeclared symbol 'rst' in bind instance actual, assumed default net type 'wire'
+[INFO (VERI-9030)] tb.sv(19): undeclared symbol 'rst' in bind instance actual, assumed default net type 'wire'
+[INFO (HIER-8002)] controller.sv(187): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] covergroups.sv(1): compiling module 'functional_cov'
+[INFO (VERI-1018)] properties.sv(1): compiling module 'properties'
+[INFO (VERI-1018)] controller.sv(2): compiling module 'controller'
+[WARN (VERI-1466)] controller.sv(53): assignment under multiple clock edges is not supported for synthesis
+[WARN (VERI-1899)] controller.sv(186): 'accmodule' inside always_comb block does not represent combinational logic
+[WARN (VERI-1330)] tb.sv(19): actual bit length 2 differs from formal bit length 3 for port 'accmodule'
+[WARN (VERI-1330)] tb.sv(20): actual bit length 2 differs from formal bit length 3 for port 'accmodule'
+[WARN (VDB-1002)] tb.sv(19): net 'rst' does not have a driver
+WARNING (WNL008): Module "functional_cov" is blackboxed due to analyze/elaborate bbox_m or compilation configuration. All instances will be blackboxed.
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          3 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (2 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      4 (3 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+controller
+[<embedded>] % 
+[<embedded>] % reset rst
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst".
+[<embedded>] % 
+[<embedded>] % clock clk
+[<embedded>] % 
+[<embedded>] % reset -expression rst
+WARNING (WRS005): Overriding setting from previous "reset" commands. You must specify all reset information in one command. Refer to "help reset" for guidance.
+    For message help, type "help -message WRS005".
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst".
+[<embedded>] % 
+[<embedded>] % set_engine_mode {B M G Hps Hts Tri}
+[<embedded>] % 
+[<embedded>] % prove -bg -all
+background 0
+INFO (IPF036): Starting proof on task: "<embedded>", 24 properties to prove with 0 already proven/unreachable
+INFO (IRS029): Starting reset analysis: phase 1 of 4.
+INFO (IRS030): Running reset analysis: phase 2 of 4.
+INFO (IRS031): Running reset analysis: phase 3 of 4.
+INFO (IRS020): Starting the reset analysis simulation with a limit of 100 iterations (phase 4 of 4).
+INFO (IRS024): Reset iterations 0 to 4 analyzed.
+INFO (IRS018): Reset analysis simulation executed for 3 iterations. Assigned values for 0 of 41 design flops, 0 of 2 design latches, 52 of 60 internal elements.
+WARNING (WRS031): 41 of 41 design flop(s) with asynchronous reset condition, but not reset. Run "get_reset_info -x_value -with_reset_pin" to get a list of such flops.
+INFO (IRS039): Reset analysis complete.
+INFO (IPF031): Settings used for proof thread 0:
+    orchestration                 = off (auto)
+    time_limit                    = 86400s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = B M G Hps Hts Tri 
+    proofgrid_per_engine_max_jobs = 1
+    max engine jobs               = B M G Hps Hts Tri, total 6
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+0: Using multistage preprocessing
+0: Starting reduce
+0: Finished reduce in 0s
+0.0.PRE: Performing Proof Simplification...
+0.0.B: clocks: 2, declared: 1, looping: 0, posedge: 2, negedge: 0, noedge: 0, bothedge: 0
+0.0.B: Proof Simplification Iteration 1	[0.00 s]
+0.0.PRE: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m1_grant:precondition1" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m1_req:precondition1" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m1_req_fired_LLM" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m2_req:precondition1" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m2_req_fired_LLM_generated" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m3_req:precondition1" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m3_req_fired_LLM_generated" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m1_done:precondition1" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m1_done_fired" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m2_done:precondition1" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m2_done_fired" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m3_done:precondition1" was covered in 1 cycles in 0.00 s.
+INFO (IPF047): 0.0.PRE: The cover property "controller.ctrl_sva_inst.m3_done_fired" was covered in 1 cycles in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "controller.ctrl_sva_inst.mutex_LLM_generated" was proven in 0.00 s.
+0.0.B: Proof Simplification Iteration 2	[0.10 s]
+0.0.B: Proof Simplification Iteration 3	[0.10 s]
+0.0.B: Proof Simplification Iteration 4	[0.10 s]
+0.0.B: Proof Simplification Iteration 5	[0.10 s]
+0.0.PRE: Proof Simplification completed in 0.10 s
+0.0.B: Identified and disabled 12 duplicated targets.
+0: About to start ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+0: =============================== ProofGrid start ===============================
+0: ProofGrid usable level: 10
+0: Initial ProofGrid level: 1
+0: ProofGrid is starting event handling
+0.0.M: flip3.engr.oregonstate.edu: "Rocky Linux 9.7 (Blue Onyx)" is an unsupported operating system.
+0.0.G: flip3.engr.oregonstate.edu: "Rocky Linux 9.7 (Blue Onyx)" is an unsupported operating system.
+0.0.Tri: flip3.engr.oregonstate.edu: "Rocky Linux 9.7 (Blue Onyx)" is an unsupported operating system.
+0.0.Hps: flip3.engr.oregonstate.edu: "Rocky Linux 9.7 (Blue Onyx)" is an unsupported operating system.
+0.0.Hts: flip3.engr.oregonstate.edu: "Rocky Linux 9.7 (Blue Onyx)" is an unsupported operating system.
+0.0.B: flip3.engr.oregonstate.edu: "Rocky Linux 9.7 (Blue Onyx)" is an unsupported operating system.
+0.0.Tri: Proofgrid shell started at 1493530@flip3.engr.oregonstate.edu(local) jg_1493440_flip3.engr.oregonstate.edu_1
+0.0.G: Proofgrid shell started at 1493527@flip3.engr.oregonstate.edu(local) jg_1493440_flip3.engr.oregonstate.edu_1
+0.0.M: Proofgrid shell started at 1493526@flip3.engr.oregonstate.edu(local) jg_1493440_flip3.engr.oregonstate.edu_1
+0.0.Tri: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0: Running jobs with 9 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0: Running jobs with 9 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0.0.Hps: Proofgrid shell started at 1493528@flip3.engr.oregonstate.edu(local) jg_1493440_flip3.engr.oregonstate.edu_1
+0: Running jobs with 10 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0: Running jobs with 10 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0.0.M: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.M: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.M: Starting proof for property "controller.ctrl_sva_inst.mstate_onehot"	[0.00 s].
+0: Running jobs with 11 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0: Running jobs with 11 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.G: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Hts: Proofgrid shell started at 1493529@flip3.engr.oregonstate.edu(local) jg_1493440_flip3.engr.oregonstate.edu_1
+0.0.G: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.G: Starting proof for property "controller.ctrl_sva_inst.mstate_onehot"	[0.00 s].
+0.0.Hps: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Hps: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.Hps: Starting proof for property "controller.ctrl_sva_inst.mstate_onehot"	[0.00 s].
+0: Running jobs with 12 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0: Running jobs with 12 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0.0.M: Trace Attempt  2	[0.00 s]
+0.0.Hts: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Hts: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.mstate_onehot"	[0.00 s].
+0.0.Hts: Trace Attempt  1	[0.00 s]
+0.0.Hps: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.Hps: The property "controller.ctrl_sva_inst.mstate_onehot" was proven in 0.00 s.
+0.0.Hts: Trace Attempt  2	[0.00 s]
+0.0.Hts: Trace Attempt  3	[0.00 s]
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.mstate_onehot"	[0.00 s].
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.m1_grant"	[0.00 s].
+0.0.Hps: Stopped processing property "controller.ctrl_sva_inst.mstate_onehot"	[0.00 s].
+0.0.Hts: Trace Attempt  1	[0.00 s]
+0.0.M: Stopped processing property "controller.ctrl_sva_inst.mstate_onehot"	[0.00 s].
+0.0.M: Starting proof for property "controller.ctrl_sva_inst.m1_grant"	[0.00 s].
+0.0.G: Partitioning 1 assumptions over 6 inputs...
+0.0.Hts: Trace Attempt  2	[0.00 s]
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.Hts: A trace with 2 cycles was found. [0.00 s]
+INFO (IPF055): 0.0.Hts: A counterexample (cex) with 2 cycles was found for the property "controller.ctrl_sva_inst.m1_grant" in 0.00 s.
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.m1_grant"	[0.02 s].
+0.0.Hps: Starting proof for property "controller.ctrl_sva_inst.m2_grant"	[0.00 s].
+0.0.M: Trace Attempt  2	[0.00 s]
+0.0.M: Stopped processing property "controller.ctrl_sva_inst.m1_grant"	[0.02 s].
+0.0.M: Starting proof for property "controller.ctrl_sva_inst.m2_grant"	[0.00 s].
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.B: Proofgrid shell started at 1493525@flip3.engr.oregonstate.edu(local) jg_1493440_flip3.engr.oregonstate.edu_1
+0.0.M: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF055): 0.0.M: A counterexample (cex) with 1 cycles was found for the property "controller.ctrl_sva_inst.m2_grant" in 0.00 s.
+INFO (IPF047): 0.0.M: The cover property "controller.ctrl_sva_inst.m2_grant:precondition1" was covered in 1 cycles in 0.00 s by the incidental trace "controller.ctrl_sva_inst.m2_grant".
+0.0.M: Stopped processing property "controller.ctrl_sva_inst.m2_grant"	[0.02 s].
+0.0.Hps: Stopped processing property "controller.ctrl_sva_inst.m2_grant"	[0.02 s].
+0.0.Hps: Starting proof for property "controller.ctrl_sva_inst.m2_grant_LLM_generated"	[0.00 s].
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.m2_grant_LLM_generated"	[0.00 s].
+0: Running jobs with 13 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0: Running jobs with 13 threads on "flip3.engr.oregonstate.edu" with 8 cores.
+0.0.B: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Hts: Trace Attempt  1	[0.00 s]
+0.0.B: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.B: Starting proof for property "controller.ctrl_sva_inst.m2_grant_LLM_generated"	[0.00 s].
+0.0.Hts: Trace Attempt  2	[0.00 s]
+0.0.B: A max_length bound was found. The shortest trace is no longer than 262144 cycles. [0.00 s]
+INFO (IPF008): 0.0.B: A max_length bound of 262144 was found for the property "controller.ctrl_sva_inst.m2_grant_LLM_generated" in 0.00 s.
+0.0.Hts: Trace Attempt  3	[0.00 s]
+0.0.Hps: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.Hps: The property "controller.ctrl_sva_inst.m2_grant_LLM_generated" was proven in 0.00 s.
+0.0.Hps: Stopped processing property "controller.ctrl_sva_inst.m2_grant_LLM_generated"	[0.00 s].
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.m2_grant_LLM_generated"	[0.00 s].
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.m2_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.M: Starting proof for property "controller.ctrl_sva_inst.m2_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.Hts: Trace Attempt  1	[0.00 s]
+0.0.M: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF047): 0.0.M: The cover property "controller.ctrl_sva_inst.m2_grant_LLM_generated:precondition1" was covered in 1 cycles in 0.00 s.
+0.0.M: Stopped processing property "controller.ctrl_sva_inst.m2_grant_LLM_generated:precondition1"	[0.02 s].
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.m2_grant_LLM_generated:precondition1"	[0.02 s].
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.m3_grant"	[0.00 s].
+0.0.B: Stopped processing property "controller.ctrl_sva_inst.m2_grant_LLM_generated"	[0.02 s].
+0.0.B: Starting proof for property "controller.ctrl_sva_inst.m3_grant"	[0.00 s].
+0.0.G: Iteration  1	[0.00 s]
+0.0.B: A max_length bound was found. The shortest trace is no longer than 1048576 cycles. [0.00 s]
+INFO (IPF008): 0.0.B: A max_length bound of 1048576 was found for the property "controller.ctrl_sva_inst.m3_grant" in 0.00 s.
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.Hts: Trace Attempt  1	[0.00 s]
+0.0.Hts: Trace Attempt  2	[0.00 s]
+0.0.G: Stopped processing property "controller.ctrl_sva_inst.mstate_onehot"	[0.05 s].
+0.0.Hts: A trace with 2 cycles was found. [0.00 s]
+INFO (IPF055): 0.0.Hts: A counterexample (cex) with 2 cycles was found for the property "controller.ctrl_sva_inst.m3_grant" in 0.00 s.
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.m3_grant"	[0.02 s].
+0.0.G: Starting proof for property "controller.ctrl_sva_inst.m3_grant"	[0.00 s].
+0.0.Hps: Starting proof for property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.00 s].
+0.0.B: Stopped processing property "controller.ctrl_sva_inst.m3_grant"	[0.02 s].
+0.0.B: Starting proof for property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.00 s].
+0.0.B: A max_length bound was found. The shortest trace is no longer than 1048576 cycles. [0.00 s]
+INFO (IPF008): 0.0.B: A max_length bound of 1048576 was found for the property "controller.ctrl_sva_inst.m3_grant:precondition1" in 0.00 s.
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.M: Starting proof for property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.00 s].
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt  2	[0.00 s]
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.00 s].
+0.0.G: Partitioning 8 assumptions over 6 inputs...
+0.0.M: Trace Attempt  2	[0.00 s]
+0.0.B: A trace with 2 cycles was found. [0.00 s]
+INFO (IPF047): 0.0.B: The cover property "controller.ctrl_sva_inst.m3_grant:precondition1" was covered in 2 cycles in 0.00 s.
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.02 s].
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated"	[0.00 s].
+0.0.B: Stopped processing property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.02 s].
+0.0.M: Stopped processing property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.02 s].
+0.0.M: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated"	[0.00 s].
+0.0.Hps: Stopped processing property "controller.ctrl_sva_inst.m3_grant:precondition1"	[0.02 s].
+0.0.Hps: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated"	[0.00 s].
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.Hts: Trace Attempt  1	[0.00 s]
+0.0.Hts: Trace Attempt  2	[0.00 s]
+0: ProofGrid is temporarily paused because there are too many pending traces.
+0: ProofGrid is resuming to work after pausing for 0s. The amount of pending traces decreased.
+0.0.Hts: A trace with 2 cycles was found. [0.00 s]
+INFO (IPF055): 0.0.Hts: A counterexample (cex) with 2 cycles was found for the property "controller.ctrl_sva_inst.m3_grant_LLM_generated" in 0.00 s.
+0: ProofGrid is temporarily paused because there are too many pending traces.
+0: ProofGrid is resuming to work after pausing for 0s. The amount of pending traces decreased.
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated"	[0.02 s].
+0.0.Tri: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.Tri: Last scan. Per property time limit: 0s
+0.0.Tri: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.Tri: Trace Attempt  1	[0.00 s]
+0.0.Tri:    0.00" ---- Launching main thread ----
+0.0.B: Last scan. Per property time limit: 0s
+0.0.B: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.B: A max_length bound was found. The shortest trace is no longer than 131072 cycles. [0.00 s]
+INFO (IPF008): 0.0.B: A max_length bound of 131072 was found for the property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1" in 0.00 s.
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.B: Requesting engine job to stop
+0.0.M: Requesting engine job to stop
+0.0.G: Requesting engine job to stop
+0.0.Hps: Requesting engine job to stop
+0.0.Hts: Requesting engine job to stop
+0.0.Tri: Requesting engine job to stop
+INFO (IPF144): 0: Initiating shutdown of proof [0.09 s]
+0.0.B: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF047): 0.0.B: The cover property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1" was covered in 1 cycles in 0.00 s.
+0.0.B: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.02 s].
+0.0.M: Trace Attempt  2	[0.00 s]
+0.0.M: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated"	[0.04 s].
+0.0.M: Last scan. Per property time limit: 0s
+0.0.M: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.M: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.G: Iteration  1	[0.01 s]
+0.0.G: Iteration  2	[0.01 s]
+0.0.G: Stopped processing property "controller.ctrl_sva_inst.m3_grant"	[0.06 s].
+0.0.G: Last scan. Per property time limit: 0s
+0.0.G: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.G: Partitioning 8 assumptions over 6 inputs...
+0.0.G: Iteration  1	[0.01 s]
+0.0.G: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.Hps: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated"	[0.04 s].
+0.0.Hps: Last scan. Per property time limit: 0s
+0.0.Hps: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.Hts: Last scan. Per property time limit: 0s
+0.0.Hts: Starting proof for property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.Hts: Trace Attempt  1	[0.00 s]
+0.0.Hts: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.M: All properties determined. [0.08 s]
+0.0.Hts: All properties determined. [0.08 s]
+0.0.B: All properties determined. [0.08 s]
+0.0.G: All properties determined. [0.08 s]
+0.0.M: Exited with Success (@ 0.09 s)
+0: ProofGrid usable level: 0
+0.0.Hps: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.00 s].
+0.0.Hps: All properties determined. [0.08 s]
+0.0.Hts: Exited with Success (@ 0.09 s)
+0.0.G: Exited with Success (@ 0.09 s)
+0.0.Hps: Exited with Success (@ 0.09 s)
+0.0.Tri: Stopped processing property "controller.ctrl_sva_inst.m3_grant_LLM_generated:precondition1"	[0.18 s].
+0.0.B: Exited with Success (@ 0.29 s)
+0.0.Tri: All properties determined. [0.23 s]
+0.0.Tri: Exited with Success (@ 0.29 s)
+0: --------------------------------------------------------------
+ProofGrid Summary (utilization 46.27 %)
+--------------------------------------------------------------
+     engines started                               :     6
+     engine jobs started                           :     6
+
+    Average time in state (seconds)
+    ------------------------------------------------------
+    Engine  Pending     Running        Dead    Utilization
+    ------------------------------------------------------
+      B        0.11        0.08        0.00       43.48 %
+      M        0.10        0.09        0.00       46.86 %
+      G        0.10        0.09        0.00       46.99 %
+    Hps        0.10        0.09        0.00       46.75 %
+    Hts        0.10        0.09        0.00       46.18 %
+    Tri        0.10        0.09        0.00       47.43 %
+    all        0.10        0.09        0.00       46.27 %
+
+    Total time in state (seconds)
+    -----------------------------------------
+            Pending     Running        Dead  
+    -----------------------------------------
+               0.61        0.53        0.00
+
+    Data read    : 15.69 kiB
+    Data written : 7.04 kiB
+
+0: All pending notifications were processed.
+INFO (IPF059): 0: Completed proof on task: "<embedded>"
+
+==============================================================
+SUMMARY
+==============================================================
+           Properties Considered              : 24
+                 assertions                   : 7
+                  - proven                    : 3 (42.8571%)
+                  - bounded_proven (user)     : 0 (0%)
+                  - bounded_proven (auto)     : 0 (0%)
+                  - marked_proven             : 0 (0%)
+                  - cex                       : 4 (57.1429%)
+                  - ar_cex                    : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+                 covers                       : 17
+                  - unreachable               : 0 (0%)
+                  - bounded_unreachable (user): 0 (0%)
+                  - covered                   : 17 (100%)
+                  - ar_covered                : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+INFO (IPL005): Received request to exit from the console.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
+INFO (IPL018): The peak resident set memory use for this session was 0.365 GB.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

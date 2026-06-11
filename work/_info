@@ -1,0 +1,294 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt2
+R1
+R2
+R1
+R2
+R1
+!s12c _opt1
+R1
+R0
+R1
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller
+T_opt
+!i145 1
+!i144 0
+!s110 1778776539
+V@BCThmGzXJZ;Xn2TPFR710
+Z4 04 2 4 work tb fast 0
+=1-005056a058aa-6a05f9d8-ae075-ea2ac
+R1
+Z5 !s12f OEM100
+Z6 !s12b OEM100
+Z7 !s124 OEM100
+Z8 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z9 tCvgOpt 0
+n@_opt
+Z10 OL;O;2025.2_1;82
+T_opt1
+!i145 1
+!i144 0
+!s110 1775606431
+V^C5XL_H=3UOj7CzIXRR0c0
+04 10 4 work controller fast 0
+R4
+=1-005056a0d0f9-69d59a9f-b1347-935a8
+R1
+R5
+R6
+R7
+R8
+o-quiet -auto_acc_if_foreign -work work +acc
+R9
+n@_opt1
+R10
+R3
+T_opt2
+!i145 1
+!i144 0
+!s110 1775620118
+Vi@Qb7HCnSeY;0PO[4lfU10
+R4
+=1-005056a0d0f9-69d5d016-35095-a10fb
+R1
+R5
+R6
+R7
+R8
+o-quiet -auto_acc_if_foreign -work work +acc=npr
+R9
+n@_opt2
+R10
+R3
+vcontroller
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z12 !s110 1778776529
+!i10b 1
+!s100 1SKlggZ`^CBJz[85cJhK>1
+IAla__5LbKH?gY?dnzb8cP0
+S1
+R3
+w1778776523
+Z13 8controller.sv
+Z14 Fcontroller.sv
+!i122 138
+L0 2 186
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+Z16 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z17 !s108 1778776527.000000
+Z18 !s107 properties.sv|covergroups.sv|controller.sv|tb.sv|
+Z19 !s90 tb.sv|controller.sv|covergroups.sv|properties.sv|+fcover|-cover|sbcef|+cover=f|-O0|-mfcu|
+!s101 -O0
+!i113 0
+Z20 !s102 -cover sbcef +cover=f
+Z21 o+fcover -cover sbcef +cover=f -O0 -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+Xcovergroups_sv_unit
+R11
+!s110 1778276004
+VQQNEIDQnn5mc]`M>`TXXZ1
+r1
+!s85 0
+!i10b 1
+!s100 ?G7g`cG_S0[]R9gP6[PQS1
+IQQNEIDQnn5mc]`M>`TXXZ1
+!i103 1
+S1
+R3
+w1778211008
+Z22 8covergroups.sv
+Z23 Fcovergroups.sv
+!i122 119
+Z24 L0 1 0
+R16
+31
+!s108 1778276004.000000
+!s107 covergroups.sv|controller.sv|tb.sv|
+!s90 tb.sv|controller.sv|covergroups.sv|+fcover|-cover|sbcef|+cover=f|-O0|
+!s101 -O0
+!i113 0
+R20
+o+fcover -cover sbcef +cover=f -O0 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+vfunctional_cov
+R11
+R12
+!i10b 1
+!s100 5_5]ET@9>^c4QzS]aH6E<0
+I3:=z7IKKL]g1GYkk0G>K_2
+S1
+R3
+w1778278164
+R22
+R23
+!i122 138
+L0 1 98
+R15
+R16
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+!i113 0
+R20
+R21
+R9
+vproperties
+R11
+R12
+!i10b 1
+!s100 lgV<68U_j><BQM;XHZlce3
+Ia4Y64Bj4ihfLi]eeK^KAK3
+S1
+R3
+w1778697952
+Z25 8properties.sv
+Z26 Fproperties.sv
+!i122 138
+L0 1 78
+R15
+R16
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+!i113 0
+R20
+R21
+R9
+vtb
+R11
+R12
+!i10b 1
+!s100 YKh<Z1f>Y?b64jeOgzVOX3
+IbnFhXO`dF?RPagl[D?VUn2
+S1
+R3
+w1778693758
+Z27 8tb.sv
+Z28 Ftb.sv
+!i122 138
+L0 2 164
+R15
+R16
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+!i113 0
+R20
+R21
+R9
+Xtb_sv_unit
+R11
+!s110 1778273532
+VeSIZ6_lZj`F;^idHnF:Fd0
+r1
+!s85 0
+!i10b 1
+!s100 :>iXE@7kH_F<f==>9`lf;1
+IeSIZ6_lZj`F;^idHnF:Fd0
+!i103 1
+S1
+R3
+w1778273514
+R27
+R28
+R13
+R14
+R22
+R23
+R25
+R26
+!i122 116
+R24
+R16
+31
+!s108 1778273532.000000
+R18
+R19
+!s101 -O0
+!i113 0
+R20
+R21
+R9

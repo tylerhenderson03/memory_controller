@@ -1,0 +1,2 @@
+var g_data = {"8":{"pr":"/tb/iDUT/ctrl_sva_inst","ty":2,"dui":4,"dun":"work.properties","direct":[{"n":["m1_req_fired_LLM"],"h":7},{"n":["m2_req_fired_LLM_generated"],"h":9},{"n":["m3_req_fired_LLM_generated"],"h":7}]}};
+processDirectivesData(g_data);

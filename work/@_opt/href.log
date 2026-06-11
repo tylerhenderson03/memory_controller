@@ -1,0 +1,10 @@
+BEGIN 1:controller:fast:work
+    req :  1:tb:fast:work
+    reset :  1:tb:fast:work
+    clk :  1:tb:fast:work
+    done :  1:functional_cov:fast:work 1:tb:fast:work
+    mstate :  1:tb:fast:work
+    nb_interrupts :  1:tb:fast:work
+    ps :  1:functional_cov:fast:work
+    accmodule :  1:tb:fast:work
+END 

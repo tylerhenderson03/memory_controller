@@ -1,0 +1,2 @@
+var g_data = {"8":{"pr":"/tb/iDUT/ctrl_sva_inst","ty":2,"dui":4,"dun":"work.properties","asserts":[{"n":["mstate_onehot"],"h":[0,1]},{"n":["m1_grant"],"h":[0,1]},{"n":["m2_grant"],"h":[0,1]},{"n":["m2_grant_LLM_generated"],"h":[3,1]},{"n":["m3_grant"],"h":[0,1]},{"n":["m3_grant_LLM_generated"],"h":[2,1]},{"n":["m1_req"],"h":[0,1]},{"n":["m2_req"],"h":[0,1]},{"n":["m3_req"],"h":[0,1]},{"n":["mutex_LLM_generated"],"h":[0,1]}],"ad":0}}
+processAssertionsData(g_data);

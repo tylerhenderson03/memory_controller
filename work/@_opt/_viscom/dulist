@@ -1,0 +1,4 @@
+1 10 properties 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 131072 0 254 0
+1 14 functional_cov 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 262144 0 1257 0
+1 10 controller 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 524288 0 1937 0
+1 2 tb 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 524288 0 2364 0
