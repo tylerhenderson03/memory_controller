@@ -1,2 +1,2 @@
-var g_data = ["","tb.sv","covergroups.sv","controller.sv","properties.sv"];
+var g_data = ["","covergroups.sv","tbCover.sv","controller.sv","properties.sv"];
 processSrcNamesData(g_data);

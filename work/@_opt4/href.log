@@ -1,0 +1,7 @@
+BEGIN 1:tbCover:fast:work
+    accmodule :  1:tbCover_sv_unit:fast:work
+    mstate :  1:tbCover_sv_unit:fast:work
+    req :  1:tbCover_sv_unit:fast:work
+    clk :  1:tbCover_sv_unit:fast:work
+    done :  1:tbCover_sv_unit:fast:work
+END 

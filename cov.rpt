@@ -1,263 +1,258 @@
 Coverage Report by instance with details
 
 =================================================================================
-=== Instance: /tb/iDUT/ctrl_sva_inst
+=== Instance: /tbCover/iDUT/ctrl_sva_inst
 === Design Unit: work.properties
 =================================================================================
 
 Assertion Coverage:
-    Assertions                      10         8         2    80.00%
+    Assertions                      14         2        12    14.28%
 --------------------------------------------------------------------
 Name                 File(Line)                   Failure      Pass 
                                                   Count        Count
 --------------------------------------------------------------------
-/tb/iDUT/ctrl_sva_inst/mstate_onehot
-                     properties.sv(7)                   0          1
-/tb/iDUT/ctrl_sva_inst/m1_grant
+/tbCover/iDUT/ctrl_sva_inst/mstate_onehot
                      properties.sv(14)                  0          1
-/tb/iDUT/ctrl_sva_inst/m2_grant
-                     properties.sv(19)                  0          1
-/tb/iDUT/ctrl_sva_inst/m2_grant_LLM_generated
-                     properties.sv(25)                  3          1
-/tb/iDUT/ctrl_sva_inst/m3_grant
-                     properties.sv(30)                  0          1
-/tb/iDUT/ctrl_sva_inst/m3_grant_LLM_generated
-                     properties.sv(36)                  2          1
-/tb/iDUT/ctrl_sva_inst/m1_req
-                     properties.sv(43)                  0          1
-/tb/iDUT/ctrl_sva_inst/m2_req
-                     properties.sv(53)                  0          1
-/tb/iDUT/ctrl_sva_inst/m3_req
-                     properties.sv(62)                  0          1
-/tb/iDUT/ctrl_sva_inst/mutex_LLM_generated
-                     properties.sv(72)                  0          1
+/tbCover/iDUT/ctrl_sva_inst/m1_grant
+                     properties.sv(27)              11132          1
+/tbCover/iDUT/ctrl_sva_inst/m2_grant
+                     properties.sv(32)                879          1
+/tbCover/iDUT/ctrl_sva_inst/m2_grant_LLM_generated
+                     properties.sv(38)                  0          1
+/tbCover/iDUT/ctrl_sva_inst/m3_grant
+                     properties.sv(43)               4705          1
+/tbCover/iDUT/ctrl_sva_inst/m3_grant_LLM_generated
+                     properties.sv(49)                 37          1
+/tbCover/iDUT/ctrl_sva_inst/m1_req
+                     properties.sv(56)              22332          1
+/tbCover/iDUT/ctrl_sva_inst/m2_req
+                     properties.sv(66)              22521          1
+/tbCover/iDUT/ctrl_sva_inst/m3_req
+                     properties.sv(75)              22522          1
+/tbCover/iDUT/ctrl_sva_inst/mutex_LLM_generated
+                     properties.sv(85)                  1          1
+/tbCover/iDUT/ctrl_sva_inst/no_req_during_access
+                     properties.sv(90)              11269          1
+/tbCover/iDUT/ctrl_sva_inst/m1_done
+                     properties.sv(96)              22548          1
+/tbCover/iDUT/ctrl_sva_inst/m2_done
+                     properties.sv(106)             22578          1
+/tbCover/iDUT/ctrl_sva_inst/m3_done
+                     properties.sv(115)             22654          1
 
 Directive Coverage:
-    Directives                       3         3         0   100.00%
+    Directives                       6         6         0   100.00%
 
 DIRECTIVE COVERAGE:
 --------------------------------------------------------------------------------------------
 Name                                     Design Design   Lang File(Line)      Hits Status    
                                          Unit   UnitType                                     
 --------------------------------------------------------------------------------------------
-/tb/iDUT/ctrl_sva_inst/m1_req_fired_LLM  properties Verilog  SVA  properties.sv(48)
-                                                                                 7 Covered   
-/tb/iDUT/ctrl_sva_inst/m2_req_fired_LLM_generated 
-                                         properties Verilog  SVA  properties.sv(57)
-                                                                                 9 Covered   
-/tb/iDUT/ctrl_sva_inst/m3_req_fired_LLM_generated 
-                                         properties Verilog  SVA  properties.sv(66)
-                                                                                 7 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m1_req_fired_LLM 
+                                         properties Verilog  SVA  properties.sv(61)
+                                                                              44893 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m2_req_fired_LLM_generated 
+                                         properties Verilog  SVA  properties.sv(70)
+                                                                              44972 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m3_req_fired_LLM_generated 
+                                         properties Verilog  SVA  properties.sv(79)
+                                                                              44934 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m1_done_fired 
+                                         properties Verilog  SVA  properties.sv(101)
+                                                                              45108 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m2_done_fired 
+                                         properties Verilog  SVA  properties.sv(110)
+                                                                              45029 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m3_done_fired 
+                                         properties Verilog  SVA  properties.sv(119)
+                                                                              45067 Covered   
 
 =================================================================================
-=== Instance: /tb/iDUT
+=== Instance: /tbCover/iDUT
 === Design Unit: work.controller
 =================================================================================
 Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Branches                        79        58        21    73.41%
+    Branches                        72        72         0   100.00%
 
 ================================Branch Details================================
 
-Branch Coverage for instance /tb/iDUT
+Branch Coverage for instance /tbCover/iDUT
 
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File controller.sv
 ------------------------------------IF Branch------------------------------------
-    37                                        66     Count coming in to IF
-    37              1                          8     
-    38              1                         58     
+    37                                    102998     Count coming in to IF
+    37              1                      59666     
+    38              1                      43332     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    44                                        37     Count coming in to IF
-    44              1                          8     
-    46              1                          4     
-                                              25     All False Count
+    44                                    102273     Count coming in to IF
+    44              1                      61655     
+    46              1                      11203     
+                                           29415     All False Count
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    52                                         9     Count coming in to IF
-    52              1                          5     
-    53              1                          4     
+    52                                     40982     Count coming in to IF
+    52              1                      29779     
+    53              1                      11203     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------CASE Branch------------------------------------
-    58                                       104     Count coming in to CASE
-    59              1                         38     
-    70              1                          8     
-    83              1                         10     
-    95              1                          6     
-    103             1                         12     
-    112             1                         11     
-    120             1                         11     
-    129             1                          6     
+    58                                    136598     Count coming in to CASE
+    59              1                      67082     
+    70              1                      33649     
+    83              1                       3469     
+    95              1                        821     
+    103             1                      10968     
+    112             1                       1345     
+    120             1                      17086     
+    129             1                       2176     
     138             1                          2     
 Branch totals: 9 hits of 9 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    61                                        38     Count coming in to IF
-    61              1                          2     
-    62              1                          4     
-    66              1                          4     
-    67              1                          3     
-    68              1                         25     
+    61                                     67082     Count coming in to IF
+    61              1                      32470     
+    62              1                       8244     
+    66              1                       8126     
+    67              1                       8223     
+    68              1                      10019     
 Branch totals: 5 hits of 5 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    63                                         4     Count coming in to IF
-    63              1                          2     
-    64              1                          2     
+    63                                      8244     Count coming in to IF
+    63              1                        145     
+    64              1                       8099     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    72                                         8     Count coming in to IF
-    72              1                          2     
-    81              1                          6     
+    72                                     33649     Count coming in to IF
+    72              1                       9969     
+    81              1                      23680     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    73                                         2     Count coming in to IF
-    73              1                    ***0***     
-    77              1                    ***0***     
-    78              1                    ***0***     
-    79              1                          2     
-Branch totals: 1 hit of 4 branches = 25.00%
+    73                                      9969     Count coming in to IF
+    73              1                       2489     
+    77              1                       2460     
+    78              1                       2485     
+    79              1                       2535     
+Branch totals: 4 hits of 4 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    74                                   ***0***     Count coming in to IF
-    74              1                    ***0***     
-    75              1                    ***0***     
-Branch totals: 0 hits of 2 branches = 0.00%
-
-------------------------------------IF Branch------------------------------------
-    84                                        10     Count coming in to IF
-    84              1                          1     
-    93              1                          9     
+    74                                      2489     Count coming in to IF
+    74              1                        753     
+    75              1                       1736     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    85                                         1     Count coming in to IF
-    85              1                    ***0***     
-    89              1                    ***0***     
-    90              1                    ***0***     
-    91              1                          1     
-Branch totals: 1 hit of 4 branches = 25.00%
-
-------------------------------------IF Branch------------------------------------
-    86                                   ***0***     Count coming in to IF
-    86              1                    ***0***     
-    87              1                    ***0***     
-Branch totals: 0 hits of 2 branches = 0.00%
-
-------------------------------------IF Branch------------------------------------
-    96                                         6     Count coming in to IF
-    96              1                          2     
-    101             1                          4     
+    84                                      3469     Count coming in to IF
+    84              1                        938     
+    93              1                       2531     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    97                                         2     Count coming in to IF
-    97              1                    ***0***     
-    98              1                    ***0***     
-    99              1                          2     
-Branch totals: 1 hit of 3 branches = 33.33%
+    85                                       938     Count coming in to IF
+    85              1                        206     
+    89              1                        225     
+    90              1                        252     
+    91              1                        255     
+Branch totals: 4 hits of 4 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    104                                       12     Count coming in to IF
-    104             1                          1     
-    105             1                          1     
-    110             1                         10     
+    86                                       206     Count coming in to IF
+    86              1                        105     
+    87              1                        101     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    96                                       821     Count coming in to IF
+    96              1                        586     
+    97              1                        123     
+    98              1                         57     
+    99              1                         55     
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    104                                    10968     Count coming in to IF
+    104             1                       1440     
+    105             1                       2981     
+    110             1                       6547     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    106                                        1     Count coming in to IF
-    106             1                    ***0***     
-    107             1                    ***0***     
-    108             1                          1     
-Branch totals: 1 hit of 3 branches = 33.33%
-
-------------------------------------IF Branch------------------------------------
-    113                                       11     Count coming in to IF
-    113             1                          2     
-    114             1                          1     
-                                               8     All False Count
+    106                                     2981     Count coming in to IF
+    106             1                       1501     
+    107             1                        710     
+    108             1                        770     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    115                                        1     Count coming in to IF
-    115             1                    ***0***     
-    116             1                    ***0***     
-    117             1                          1     
-Branch totals: 1 hit of 3 branches = 33.33%
-
-------------------------------------IF Branch------------------------------------
-    121                                       11     Count coming in to IF
-    121             1                          1     
-    122             1                          1     
-    127             1                          9     
+    115                                     1345     Count coming in to IF
+    115             1                        357     
+    116             1                        503     
+    117             1                        485     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    123                                        1     Count coming in to IF
-    123             1                    ***0***     
-    124             1                    ***0***     
-    125             1                          1     
-Branch totals: 1 hit of 3 branches = 33.33%
-
-------------------------------------IF Branch------------------------------------
-    130                                        6     Count coming in to IF
-    130             1                          1     
-    131             1                          1     
-    136             1                          4     
+    121                                    17086     Count coming in to IF
+    121             1                       2286     
+    122             1                       4526     
+    127             1                      10274     
 Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    132                                        1     Count coming in to IF
-    132             1                    ***0***     
-    133             1                    ***0***     
-    134             1                          1     
-Branch totals: 1 hit of 3 branches = 33.33%
+    123                                     4526     Count coming in to IF
+    123             1                       2247     
+    124             1                       1144     
+    125             1                       1135     
+Branch totals: 3 hits of 3 branches = 100.00%
 
 ------------------------------------IF Branch------------------------------------
-    145                                       51     Count coming in to IF
-    145             1                          6     
-    149             1                         45     
+    132                                     2176     Count coming in to IF
+    132             1                        561     
+    133             1                        818     
+    134             1                        797     
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    145                                   100688     Count coming in to IF
+    145             1                      41794     
+    149             1                      58894     
 Branch totals: 2 hits of 2 branches = 100.00%
 
 ------------------------------------CASE Branch------------------------------------
-    150                                       45     Count coming in to CASE
-    151             1                         16     
-    155             1                          2     
-    159             1                          5     
-    163             1                          4     
-    167             1                          6     
-    171             1                          4     
-    175             1                          5     
-    179             1                          3     
-    183             1                    ***0***     
-Branch totals: 8 hits of 9 branches = 88.88%
+    150                                    58894     Count coming in to CASE
+    151             1                      24913     
+    155             1                      14912     
+    159             1                       1830     
+    163             1                        434     
+    167             1                       5825     
+    171             1                        715     
+    175             1                       9108     
+    179             1                       1155     
+    183             1                          2     
+Branch totals: 9 hits of 9 branches = 100.00%
 
 
 Condition Coverage:
     Enabled Coverage              Bins   Covered    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Conditions                      22        18         4    81.81%
+    Conditions                      18        18         0   100.00%
 
 ================================Condition Details================================
 
-Condition Coverage for instance /tb/iDUT --
+Condition Coverage for instance /tbCover/iDUT --
 
   File controller.sv
 ----------------Focused Condition View-------------------
 Line       46 Item    1  (req[1] && req[2])
 Condition totals: 2 of 2 input terms covered = 100.00%
-
-----------------Focused Condition View-------------------
-Line       61 Item    1  (req[0] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
 Line       62 Item    1  ((req[1] == 1) && (req[2] == 1))
@@ -277,19 +272,7 @@ Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
 Line       73 Item    1  (req[1] && req[2])
-Condition totals: 0 of 2 input terms covered = 0.00%
-
-  Input Term   Covered  Reason for no coverage   Hint
- -----------  --------  -----------------------  --------------
-      req[1]         N  '_1' not hit             Hit '_1'
-      req[2]         N  No hits                  Hit '_0' and '_1'
-
-     Rows:       Hits  FEC Target            Non-masking condition(s)      
- ---------  ---------  --------------------  -------------------------     
-  Row   1:          1  req[1]_0              -                             
-  Row   2:    ***0***  req[1]_1              req[2]                        
-  Row   3:    ***0***  req[2]_0              req[1]                        
-  Row   4:    ***0***  req[2]_1              req[1]                        
+Condition totals: 2 of 2 input terms covered = 100.00%
 
 ----------------Focused Condition View-------------------
 Line       84 Item    1  (done[0] == 1)
@@ -297,54 +280,22 @@ Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
 Line       85 Item    1  (req[1] && req[2])
-Condition totals: 0 of 2 input terms covered = 0.00%
-
-  Input Term   Covered  Reason for no coverage   Hint
- -----------  --------  -----------------------  --------------
-      req[1]         N  '_1' not hit             Hit '_1'
-      req[2]         N  No hits                  Hit '_0' and '_1'
-
-     Rows:       Hits  FEC Target            Non-masking condition(s)      
- ---------  ---------  --------------------  -------------------------     
-  Row   1:          1  req[1]_0              -                             
-  Row   2:    ***0***  req[1]_1              req[2]                        
-  Row   3:    ***0***  req[2]_0              req[1]                        
-  Row   4:    ***0***  req[2]_1              req[1]                        
+Condition totals: 2 of 2 input terms covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       96 Item    1  (done[0] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
-
-----------------Focused Condition View-------------------
-Line       104 Item    1  (req[0] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
+Line       104 Item    1  ((req[0] == 1) && (done[1] == 0))
+Condition totals: 2 of 2 input terms covered = 100.00%
 
 ----------------Focused Condition View-------------------
 Line       105 Item    1  (done[1] == 1)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 ----------------Focused Condition View-------------------
-Line       113 Item    1  (req[0] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
-
-----------------Focused Condition View-------------------
-Line       114 Item    1  (done[1] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
-
-----------------Focused Condition View-------------------
-Line       121 Item    1  (req[0] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
+Line       121 Item    1  ((req[0] == 1) && (done[2] == 0))
+Condition totals: 2 of 2 input terms covered = 100.00%
 
 ----------------Focused Condition View-------------------
 Line       122 Item    1  (done[2] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
-
-----------------Focused Condition View-------------------
-Line       130 Item    1  (req[0] == 1)
-Condition totals: 1 of 1 input term covered = 100.00%
-
-----------------Focused Condition View-------------------
-Line       131 Item    1  (done[2] == 1)
 Condition totals: 1 of 1 input term covered = 100.00%
 
 
@@ -352,11 +303,11 @@ FSM Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     FSM States                       8         8         0   100.00%
-    FSM Transitions                 31        17        14    54.83%
+    FSM Transitions                 30        30         0   100.00%
 
 ================================FSM Details================================
 
-FSM Coverage for instance /tb/iDUT --
+FSM Coverage for instance /tbCover/iDUT --
 
 FSM_ID: ps
     Current State Object : ps
@@ -377,356 +328,526 @@ Line          State Name               Value
     ----------------
                    State           Hit_count
                    -----           ---------
-                    IDLE                  32          
-                  M3_one                   5          
-                  M2_one                   6          
-                 M1_free                   4          
-              M1_int_one                   5          
-              M1_int_two                   4          
-                  M2_two                   7          
-                  M3_two                   3          
+                    IDLE               65239          
+                  M3_one                9108          
+                  M2_one                5825          
+                 M1_free               18691          
+              M1_int_one                1830          
+              M1_int_two                 434          
+                  M2_two                 715          
+                  M3_two                1155          
     Covered Transitions :
     ---------------------
 Line            Trans_ID           Hit_count          Transition          
 ----            --------           ---------          ----------          
-  67                   0                   5          IDLE -> M3_one                
-  66                   1                   6          IDLE -> M2_one                
-  61                   2                   2          IDLE -> M1_free               
- 127                   3                   3          M3_one -> M3_two              
- 125                   4                   1          M3_one -> IDLE                
- 121                   7                   1          M3_one -> M1_int_one          
- 110                   8                   4          M2_one -> M2_two              
- 108                   9                   1          M2_one -> IDLE                
- 104                  12                   1          M2_one -> M1_int_one          
-  79                  13                   2          M1_free -> IDLE               
-  93                  16                   4          M1_int_one -> M1_int_two          
-  91                  17                   1          M1_int_one -> IDLE            
- 101                  20                   4          M1_int_two -> IDLE            
- 117                  23                   2          M2_two -> IDLE                
- 113                  26                   2          M2_two -> M1_int_one          
- 136                  27                   2          M3_two -> IDLE                
- 130                  30                   1          M3_two -> M1_int_one          
-    Uncovered Transitions :
-    -----------------------
-Line            Trans_ID          Transition          
-----            --------          ----------          
- 124                   5          M3_one -> M2_one    
- 123                   6          M3_one -> M1_free   
- 107                  10          M2_one -> M3_one    
- 106                  11          M2_one -> M1_free   
-  78                  14          M1_free -> M3_one   
-  77                  15          M1_free -> M2_one   
-  90                  18          M1_int_one -> M3_one
-  89                  19          M1_int_one -> M2_one
-  98                  21          M1_int_two -> M3_one
-  97                  22          M1_int_two -> M2_one
- 116                  24          M2_two -> M3_one    
- 115                  25          M2_two -> M1_free   
- 133                  28          M3_two -> M2_one    
- 132                  29          M3_two -> M1_free   
+  67                   0                6344          IDLE -> M3_one                
+  66                   1                3228          IDLE -> M2_one                
+  61                   2               12485          IDLE -> M1_free               
+ 127                   3                1155          M3_one -> M3_two              
+ 125                   4                5125          M3_one -> IDLE                
+ 124                   5                 583          M3_one -> M2_one              
+ 123                   6                1135          M3_one -> M1_free             
+ 121                   7                1110          M3_one -> M1_int_one          
+ 110                   8                 715          M2_one -> M2_two              
+ 108                   9                3287          M2_one -> IDLE                
+ 107                  10                 351          M2_one -> M3_one              
+ 106                  11                 752          M2_one -> M1_free             
+ 104                  12                 720          M2_one -> M1_int_one          
+  79                  13               11174          M1_free -> IDLE               
+  78                  14                2108          M1_free -> M3_one             
+  77                  15                1630          M1_free -> M2_one             
+  93                  16                 434          M1_int_one -> M1_int_two          
+  91                  17                1048          M1_int_one -> IDLE            
+  90                  18                 182          M1_int_one -> M3_one          
+  89                  19                 166          M1_int_one -> M2_one          
+  99                  20                 257          M1_int_two -> IDLE            
+  98                  21                  29          M1_int_two -> M3_one          
+  97                  22                  55          M1_int_two -> M2_one          
+  96                  23                  93          M1_int_two -> M1_free          
+ 117                  24                 445          M2_two -> IDLE                
+ 116                  25                  94          M2_two -> M3_one              
+ 115                  26                 176          M2_two -> M1_free             
+ 134                  27                 721          M3_two -> IDLE                
+ 133                  28                 163          M3_two -> M2_one              
+ 132                  29                 271          M3_two -> M1_free             
 
 
     Summary                       Bins      Hits    Misses  Coverage
     -------                       ----      ----    ------  --------
         FSM States                   8         8         0   100.00%
-        FSM Transitions             31        17        14    54.83%
+        FSM Transitions             30        30         0   100.00%
 Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                      72        53        19    73.61%
+    Statements                      69        69         0   100.00%
 
 ================================Statement Details================================
 
-Statement Coverage for instance /tb/iDUT --
+Statement Coverage for instance /tbCover/iDUT --
 
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
   File controller.sv
-    36              1                         66     
-    37              1                          8     
-    38              1                         58     
-    43              1                         37     
-    45              1                          8     
-    47              1                          4     
-    51              1                          9     
-    52              1                          5     
-    53              1                          4     
-    57              1                        104     
-    61              1                          2     
-    63              1                          2     
-    64              1                          2     
-    66              1                          4     
-    67              1                          3     
-    68              1                         25     
-    74              1                    ***0***     
-    75              1                    ***0***     
-    77              1                    ***0***     
-    78              1                    ***0***     
-    79              1                          2     
-    81              1                          6     
-    86              1                    ***0***     
-    87              1                    ***0***     
-    89              1                    ***0***     
-    90              1                    ***0***     
-    91              1                          1     
-    93              1                          9     
-    97              1                    ***0***     
-    98              1                    ***0***     
-    99              1                          2     
-    101             1                          4     
-    104             1                          1     
-    106             1                    ***0***     
-    107             1                    ***0***     
-    108             1                          1     
-    110             1                         10     
-    113             1                          2     
-    115             1                    ***0***     
-    116             1                    ***0***     
-    117             1                          1     
-    121             1                          1     
-    123             1                    ***0***     
-    124             1                    ***0***     
-    125             1                          1     
-    127             1                          9     
-    130             1                          1     
-    132             1                    ***0***     
-    133             1                    ***0***     
-    134             1                          1     
-    136             1                          4     
+    36              1                     102998     
+    37              1                      59666     
+    38              1                      43332     
+    43              1                     102273     
+    45              1                      61655     
+    47              1                      11203     
+    51              1                      40982     
+    52              1                      29779     
+    53              1                      11203     
+    57              1                     136598     
+    61              1                      32470     
+    63              1                        145     
+    64              1                       8099     
+    66              1                       8126     
+    67              1                       8223     
+    68              1                      10019     
+    74              1                        753     
+    75              1                       1736     
+    77              1                       2460     
+    78              1                       2485     
+    79              1                       2535     
+    81              1                      23680     
+    86              1                        105     
+    87              1                        101     
+    89              1                        225     
+    90              1                        252     
+    91              1                        255     
+    93              1                       2531     
+    96              1                        586     
+    97              1                        123     
+    98              1                         57     
+    99              1                         55     
+    104             1                       1440     
+    106             1                       1501     
+    107             1                        710     
+    108             1                        770     
+    110             1                       6547     
+    115             1                        357     
+    116             1                        503     
+    117             1                        485     
+    121             1                       2286     
+    123             1                       2247     
+    124             1                       1144     
+    125             1                       1135     
+    127             1                      10274     
+    132             1                        561     
+    133             1                        818     
+    134             1                        797     
     138             1                          2     
-    143             1                         51     
-    146             1                          6     
-    147             1                          6     
-    152             1                         16     
-    153             1                         16     
-    156             1                          2     
-    157             1                          2     
-    160             1                          5     
-    161             1                          5     
-    164             1                          4     
-    165             1                          4     
-    168             1                          6     
-    169             1                          6     
-    172             1                          4     
-    173             1                          4     
-    176             1                          5     
-    177             1                          5     
-    180             1                          3     
-    181             1                          3     
-    183             1                    ***0***     
+    143             1                     100688     
+    146             1                      41794     
+    147             1                      41794     
+    152             1                      24913     
+    153             1                      24913     
+    156             1                      14912     
+    157             1                      14912     
+    160             1                       1830     
+    161             1                       1830     
+    164             1                        434     
+    165             1                        434     
+    168             1                       5825     
+    169             1                       5825     
+    172             1                        715     
+    173             1                        715     
+    176             1                       9108     
+    177             1                       9108     
+    180             1                       1155     
+    181             1                       1155     
+    183             1                          2     
 
 =================================================================================
-=== Instance: /tb
-=== Design Unit: work.tb
+=== Instance: /tbCover
+=== Design Unit: work.tbCover
 =================================================================================
-Statement Coverage:
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                     153       153         0   100.00%
+    Branches                         2         1         1    50.00%
 
-================================Statement Details================================
+================================Branch Details================================
 
-Statement Coverage for instance /tb --
+Branch Coverage for instance /tbCover
 
     Line         Item                      Count     Source 
     ----         ----                      -----     ------ 
-  File tb.sv
-    24              1                        154     
-    24              2                        153     
-    37              1                          1     
-    38              1                          1     
-    39              1                          1     
-    40              1                          1     
-    42              1                          1     
-    42              2                          1     
-    45              1                          1     
-    45              2                          1     
-    46              1                          1     
-    46              2                          1     
-    47              1                          1     
-    47              2                          1     
+  File tbCover.sv
+------------------------------------IF Branch------------------------------------
+    68                                     90000     Count coming in to IF
+    68              1                      90000     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      25        25         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /tbCover --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File tbCover.sv
+    36              1                     180004     
+    36              2                     180003     
     48              1                          1     
-    48              2                          1     
+    49              1                          1     
+    50              1                          1     
     51              1                          1     
-    51              2                          1     
-    52              1                          1     
-    52              2                          1     
-    53              1                          1     
-    53              2                          1     
-    54              1                          1     
-    54              2                          1     
     56              1                          1     
-    56              2                          1     
     57              1                          1     
-    57              2                          1     
-    60              1                          1     
-    60              2                          1     
-    61              1                          1     
-    61              2                          1     
+    58              1                          1     
+    59              1                          1     
+    62              1                          1     
     63              1                          1     
-    63              2                          1     
     64              1                          1     
-    64              2                          1     
-    66              1                          1     
-    66              2                          1     
-    67              1                          1     
-    67              2                          1     
-    70              1                          1     
-    70              2                          1     
-    71              1                          1     
-    71              2                          1     
-    73              1                          1     
-    73              2                          1     
-    74              1                          1     
-    74              2                          1     
-    78              1                          1     
-    78              2                          1     
+    65              1                          1     
+    65              2                          1     
+    67              1                      90000     
+    69              1                      90000     
+    70              1                      90000     
+    71              1                      90000     
+    73              1                      90000     
     79              1                          1     
     79              2                          1     
-    81              1                          1     
-    81              2                          1     
-    82              1                          1     
-    82              2                          1     
+    80              1                          1     
     85              1                          1     
-    85              2                          1     
     86              1                          1     
-    86              2                          1     
-    87              1                          1     
-    87              2                          1     
-    88              1                          1     
-    88              2                          1     
-    91              1                          1     
-    91              2                          1     
-    92              1                          1     
-    92              2                          1     
-    93              1                          1     
-    93              2                          1     
-    94              1                          1     
-    94              2                          1     
-    97              1                          1     
-    97              2                          1     
-    98              1                          1     
-    98              2                          1     
-    101             1                          1     
-    101             2                          1     
-    102             1                          1     
-    102             2                          1     
-    105             1                          1     
-    105             2                          1     
-    106             1                          1     
-    106             2                          1     
-    107             1                          1     
-    108             1                          1     
-    108             2                          1     
-    111             1                          1     
-    111             2                          1     
-    112             1                          1     
-    112             2                          1     
-    113             1                          1     
-    113             2                          1     
-    114             1                          1     
-    114             2                          1     
-    117             1                          1     
-    117             2                          1     
-    118             1                          1     
-    118             2                          1     
-    121             1                          1     
-    121             2                          1     
-    122             1                          1     
-    122             2                          1     
-    122             3                          1     
-    123             1                          1     
-    123             2                          1     
-    126             1                          1     
-    126             2                          1     
-    127             1                          1     
-    127             2                          1     
-    127             3                          1     
-    128             1                          1     
-    128             2                          1     
-    128             3                          1     
-    129             1                          1     
-    129             2                          1     
-    132             1                          1     
-    132             2                          1     
-    133             1                          1     
-    133             2                          1     
-    133             3                          1     
-    134             1                          1     
-    134             2                          1     
-    137             1                          1     
-    137             2                          1     
-    138             1                          1     
-    138             2                          1     
-    138             3                          1     
-    139             1                          1     
-    139             2                          1     
-    140             1                          1     
-    140             2                          1     
-    141             1                          1     
-    141             2                          1     
-    144             1                          1     
-    144             2                          1     
-    145             1                          1     
-    145             2                          1     
-    146             1                          1     
-    146             2                          1     
-    146             3                          1     
-    147             1                          1     
-    147             2                          1     
-    148             1                          1     
-    148             2                          1     
-    149             1                          1     
-    149             2                          1     
-    152             1                          1     
-    152             2                          1     
-    153             1                          1     
-    158             1                          1     
-    159             1                          1     
-    160             1                          1     
 
+=================================================================================
+=== Instance: /tbCover_sv_unit
+=== Design Unit: work.tbCover_sv_unit
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      3        na        na    91.66%
+        Coverpoints/Crosses         11        na        na        na
+            Covergroup Bins         11        10         1    90.90%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /tbCover_sv_unit/cg_priority                    100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_req                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_accmodule                           100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cp_priority_0                               100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/tbCover/cg_0                   100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_req                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin req_0                                       11244          1          -    Covered              
+    Coverpoint cp_accmodule                           100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin accmod_2                                     2420          1          -    Covered              
+    Cross cp_priority_0                               100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <req_0,accmod_2>                          307          1          -    Covered              
+ TYPE /tbCover_sv_unit/cg_m1_high_priority             75.00%        100          -    Uncovered            
+    covered/total bins:                                     3          4          -                      
+    missing/total bins:                                     1          4          -                      
+    % Hit:                                             75.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m2_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m2_two                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m3_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m3_two                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/tbCover/cg_1                    75.00%        100          -    Uncovered            
+    covered/total bins:                                     3          4          -                      
+    missing/total bins:                                     1          4          -                      
+    % Hit:                                             75.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m2_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_interrupts_m2_one                          340          1          -    Covered              
+    Coverpoint cp_m1_interrupts_m2_two                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_interrupts_m2_two                          340          1          -    Covered              
+    Coverpoint cp_m1_interrupts_m3_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_interrupts_m3_one                          568          1          -    Covered              
+    Coverpoint cp_m1_interrupts_m3_two                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin m1_interrupts_m3_two                            0          1          -    ZERO                 
+ TYPE /tbCover_sv_unit/cg_m1_indef_access             100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_m1_free_request                     100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_free_state                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_indef_hold                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_free_exit                        100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/tbCover/cg_2                   100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_m1_free_request                     100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_req_while_idle                           35119          1          -    Covered              
+    Coverpoint cp_m1_free_state                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin entered_m1_free                              6264          1          -    Covered              
+    Coverpoint cp_m1_indef_hold                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_holds_3plus_cycles                         661          1          -    Covered              
+    Coverpoint cp_m1_free_exit                        100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_exits_on_done                             1514          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /tbCover_sv_unit/cg_priority                    100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_req                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_accmodule                           100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cp_priority_0                               100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/tbCover/cg_0                   100.00%        100          -    Covered              
+    covered/total bins:                                     3          3          -                      
+    missing/total bins:                                     0          3          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_req                                 100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin req_0                                       11244          1          -    Covered              
+    Coverpoint cp_accmodule                           100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin accmod_2                                     2420          1          -    Covered              
+    Cross cp_priority_0                               100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <req_0,accmod_2>                          307          1          -    Covered              
+ TYPE /tbCover_sv_unit/cg_m1_high_priority             75.00%        100          -    Uncovered            
+    covered/total bins:                                     3          4          -                      
+    missing/total bins:                                     1          4          -                      
+    % Hit:                                             75.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m2_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m2_two                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m3_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m3_two                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+ Covergroup instance \/tbCover/cg_1                    75.00%        100          -    Uncovered            
+    covered/total bins:                                     3          4          -                      
+    missing/total bins:                                     1          4          -                      
+    % Hit:                                             75.00%        100          -                      
+    Coverpoint cp_m1_interrupts_m2_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_interrupts_m2_one                          340          1          -    Covered              
+    Coverpoint cp_m1_interrupts_m2_two                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_interrupts_m2_two                          340          1          -    Covered              
+    Coverpoint cp_m1_interrupts_m3_one                100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_interrupts_m3_one                          568          1          -    Covered              
+    Coverpoint cp_m1_interrupts_m3_two                  0.00%        100          -    ZERO                 
+        covered/total bins:                                 0          1          -                      
+        missing/total bins:                                 1          1          -                      
+        % Hit:                                          0.00%        100          -                      
+        bin m1_interrupts_m3_two                            0          1          -    ZERO                 
+ TYPE /tbCover_sv_unit/cg_m1_indef_access             100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_m1_free_request                     100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_free_state                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_indef_hold                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_m1_free_exit                        100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/tbCover/cg_2                   100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_m1_free_request                     100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_req_while_idle                           35119          1          -    Covered              
+    Coverpoint cp_m1_free_state                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin entered_m1_free                              6264          1          -    Covered              
+    Coverpoint cp_m1_indef_hold                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_holds_3plus_cycles                         661          1          -    Covered              
+    Coverpoint cp_m1_free_exit                        100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin m1_exits_on_done                             1514          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 91.66%  COVERGROUP TYPES: 3
 
 DIRECTIVE COVERAGE:
 --------------------------------------------------------------------------------------------
 Name                                     Design Design   Lang File(Line)      Hits Status    
                                          Unit   UnitType                                     
 --------------------------------------------------------------------------------------------
-/tb/iDUT/ctrl_sva_inst/m1_req_fired_LLM  properties Verilog  SVA  properties.sv(48)
-                                                                                 7 Covered   
-/tb/iDUT/ctrl_sva_inst/m2_req_fired_LLM_generated 
-                                         properties Verilog  SVA  properties.sv(57)
-                                                                                 9 Covered   
-/tb/iDUT/ctrl_sva_inst/m3_req_fired_LLM_generated 
-                                         properties Verilog  SVA  properties.sv(66)
-                                                                                 7 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m1_req_fired_LLM 
+                                         properties Verilog  SVA  properties.sv(61)
+                                                                              44893 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m2_req_fired_LLM_generated 
+                                         properties Verilog  SVA  properties.sv(70)
+                                                                              44972 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m3_req_fired_LLM_generated 
+                                         properties Verilog  SVA  properties.sv(79)
+                                                                              44934 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m1_done_fired 
+                                         properties Verilog  SVA  properties.sv(101)
+                                                                              45108 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m2_done_fired 
+                                         properties Verilog  SVA  properties.sv(110)
+                                                                              45029 Covered   
+/tbCover/iDUT/ctrl_sva_inst/m3_done_fired 
+                                         properties Verilog  SVA  properties.sv(119)
+                                                                              45067 Covered   
 
-TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 3
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 6
 
 ASSERTION RESULTS:
 --------------------------------------------------------------------
 Name                 File(Line)                   Failure      Pass 
                                                   Count        Count
 --------------------------------------------------------------------
-/tb/iDUT/ctrl_sva_inst/mstate_onehot
-                     properties.sv(7)                   0          1
-/tb/iDUT/ctrl_sva_inst/m1_grant
+/tbCover/iDUT/ctrl_sva_inst/mstate_onehot
                      properties.sv(14)                  0          1
-/tb/iDUT/ctrl_sva_inst/m2_grant
-                     properties.sv(19)                  0          1
-/tb/iDUT/ctrl_sva_inst/m2_grant_LLM_generated
-                     properties.sv(25)                  3          1
-/tb/iDUT/ctrl_sva_inst/m3_grant
-                     properties.sv(30)                  0          1
-/tb/iDUT/ctrl_sva_inst/m3_grant_LLM_generated
-                     properties.sv(36)                  2          1
-/tb/iDUT/ctrl_sva_inst/m1_req
-                     properties.sv(43)                  0          1
-/tb/iDUT/ctrl_sva_inst/m2_req
-                     properties.sv(53)                  0          1
-/tb/iDUT/ctrl_sva_inst/m3_req
-                     properties.sv(62)                  0          1
-/tb/iDUT/ctrl_sva_inst/mutex_LLM_generated
-                     properties.sv(72)                  0          1
+/tbCover/iDUT/ctrl_sva_inst/m1_grant
+                     properties.sv(27)              11132          1
+/tbCover/iDUT/ctrl_sva_inst/m2_grant
+                     properties.sv(32)                879          1
+/tbCover/iDUT/ctrl_sva_inst/m2_grant_LLM_generated
+                     properties.sv(38)                  0          1
+/tbCover/iDUT/ctrl_sva_inst/m3_grant
+                     properties.sv(43)               4705          1
+/tbCover/iDUT/ctrl_sva_inst/m3_grant_LLM_generated
+                     properties.sv(49)                 37          1
+/tbCover/iDUT/ctrl_sva_inst/m1_req
+                     properties.sv(56)              22332          1
+/tbCover/iDUT/ctrl_sva_inst/m2_req
+                     properties.sv(66)              22521          1
+/tbCover/iDUT/ctrl_sva_inst/m3_req
+                     properties.sv(75)              22522          1
+/tbCover/iDUT/ctrl_sva_inst/mutex_LLM_generated
+                     properties.sv(85)                  1          1
+/tbCover/iDUT/ctrl_sva_inst/no_req_during_access
+                     properties.sv(90)              11269          1
+/tbCover/iDUT/ctrl_sva_inst/m1_done
+                     properties.sv(96)              22548          1
+/tbCover/iDUT/ctrl_sva_inst/m2_done
+                     properties.sv(106)             22578          1
+/tbCover/iDUT/ctrl_sva_inst/m3_done
+                     properties.sv(115)             22654          1
 
-Total Coverage By Instance (filtered view): 83.09%
+Total Coverage By Instance (filtered view): 88.07%
 

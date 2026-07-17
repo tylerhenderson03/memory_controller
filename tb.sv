@@ -16,7 +16,7 @@ module tb();
   logic mod_priority;
 
   controller iDUT(.req(req), .done(done), .reset(rst), .clk(clk), .mstate(mstate), .accmodule(accmodule), .nb_interrupts(nb_interrupts), .mod_priority(mod_priority));
-  bind controller functional_cov ctrl_funct_covg_inst(.req(req), .done(done), .reset(rst), .clk(clk), .mstate(mstate), .accmodule(accmodule), .nb_interrupts(nb_interrupts), .mod_priority(mod_priority));
+  //bind controller functional_cov ctrl_funct_covg_inst(.req(req), .done(done), .reset(rst), .clk(clk), .mstate(mstate), .accmodule(accmodule), .nb_interrupts(nb_interrupts), .mod_priority(mod_priority));
   bind controller properties ctrl_sva_inst (.req(req), .accmodule(accmodule), .mstate(mstate), .clk(clk), .mod_priority(mod_priority), .reset(rst), .done(done)); 
 
   parameter PERIOD = 20;
@@ -24,15 +24,15 @@ module tb();
     #(PERIOD/2) clk = ~clk;
   end
 
-  //cg_priority         cg_priority_inst;
-  //cg_m1_high_priority cg_m1_high_priority_inst;
-  //cg_m1_indef_access  cg_m1_indef_access_inst;
+  cg_priority         cg_priority_inst;
+  cg_m1_high_priority cg_m1_high_priority_inst;
+  cg_m1_indef_access  cg_m1_indef_access_inst;
 
 initial begin
 
-  //cg_priority_inst = new;
-  //cg_m1_high_priority_inst = new;
-  //cg_m1_indef_access_inst = new;
+  cg_priority_inst = new();
+  cg_m1_high_priority_inst = new();
+  cg_m1_indef_access_inst = new();
 
   clk = 0;
   rst = 1;

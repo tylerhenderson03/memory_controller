@@ -1,0 +1,2 @@
+var g_data = {"14":["req_0"],"15":["accmod_2"],"23":["m1_interrupts_m2_one"],"24":["m1_interrupts_m2_two"],"25":["m1_interrupts_m3_one"],"26":["m1_interrupts_m3_two"],"33":["m1_req_while_idle"],"34":["entered_m1_free"],"35":["m1_holds_3plus_cycles"],"36":["m1_exits_on_done"]};
+processCoverpointsMapData(g_data);

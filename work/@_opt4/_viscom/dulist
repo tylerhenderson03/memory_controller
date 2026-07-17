@@ -1,0 +1,4 @@
+1 15 tbCover_sv_unit 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 262144 0 1388 0
+1 10 properties 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 131072 0 409 0
+1 10 controller 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 131072 0 799 0
+1 7 tbCover 4 fast 70 /nfs/stak/users/hendetyl/eecs/ece499HW_Verif/hw/memory_controller/work 0 0 262144 262144 927 0

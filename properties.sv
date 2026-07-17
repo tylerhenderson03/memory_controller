@@ -31,7 +31,7 @@ module properties(	input [2:0] req, accmodule,
 		((req == 3'b010 && mod_priority)) |-> accmodule == 2'b10
 	)else $error("m2_grant failed");
 
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m2_grant_LLM_generated: assert property(
 		@(posedge clk) disable iff (~mod_priority)
 		(req[1] && !req[0]) && (mstate == 8'b0000_1000 || mstate == 8'b1000_0000) |=> accmodule == 2'b10
@@ -42,7 +42,7 @@ module properties(	input [2:0] req, accmodule,
 		((req == 3'b100 && !mod_priority) ##1 !$stable(accmodule)) |-> accmodule == 2'b11
 	)else $error("m3_grant failed");
 
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m3_grant_LLM_generated: assert property(
 		@(posedge clk) disable iff (mod_priority)
 		(req[2] && !req[0] && (mstate == 8'b0000_1000 || mstate == 8'b0010_0000)) |=> accmodule == 2'b11
@@ -55,7 +55,7 @@ module properties(	input [2:0] req, accmodule,
 		req[0] |=> $fell(req[0])
 	)else $error("m1's req was over 1 cycle failed");
 	
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m1_req_fired_LLM: cover property(
 		@(posedge clk) req[0]  // confirms antecedent was exercised
 	);
@@ -64,7 +64,7 @@ module properties(	input [2:0] req, accmodule,
 		@(posedge clk)
 		req[1] |=> $fell(req[1])
 	)else $error("m2's req was over 1 cycle");
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m2_req_fired_LLM_generated: cover property(
     @(posedge clk) req[1]
 	);
@@ -73,12 +73,12 @@ module properties(	input [2:0] req, accmodule,
 		@(posedge clk)
 		req[2] |=> $fell(req[2])
 	)else $error("m3's req was over 1 cycle");
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m3_req_fired_LLM_generated: cover property(
 		@(posedge clk) req[2]
 	);
 
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	mutex_LLM_generated: assert property(
 		@(posedge clk)
 		!(accmodule == 2'b01 && accmodule == 2'b10)  // always true, use mstate instead
@@ -90,14 +90,12 @@ module properties(	input [2:0] req, accmodule,
 	);
 
 // I.D. XX: done signal lasts for one clock cycle
-// TODO: EDIT ASSERTION NAMES AND DEFINITIONS TO MATCH DONE SIGNAL FIRING, AND
-// ONLY LASTING ONE CLOCK CYCLE
 	m1_done: assume property(
 		@(posedge clk)
 		done[0] |=> $fell(done[0])
 	)else $error("m1's req was over 1 cycle failed");
 	
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m1_done_fired: cover property(
 		@(posedge clk) done[0]  // confirms antecedent was exercised
 	);
@@ -106,7 +104,7 @@ module properties(	input [2:0] req, accmodule,
 		@(posedge clk)
 		done[1] |=> $fell(done[1])
 	)else $error("m2's req was over 1 cycle");
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m2_done_fired: cover property(
     @(posedge clk) done[1]
 	);
@@ -115,7 +113,7 @@ module properties(	input [2:0] req, accmodule,
 		@(posedge clk)
 		done[2] |=> $fell(done[2])
 	)else $error("m3's done was over 1 cycle");
-	// ******THIS ASSERTION IS LLM GENERATED THROUGH CLAUDE'S FREE PLAN*******
+
 	m3_done_fired: cover property(
 		@(posedge clk) done[2]
 	);
